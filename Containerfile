@@ -1,5 +1,8 @@
 FROM registry.fedoraproject.org/fedora-toolbox:latest
 
+# When running locally, use the developer cache as normal.
+ARG UPDATE_AS_OF=NONE
+
 RUN dnf update --all -y
 RUN dnf groupinstall -y "Development Tools"
 RUN dnf install -y chromium firefox nodejs npm chromedriver
