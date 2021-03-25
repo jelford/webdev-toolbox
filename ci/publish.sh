@@ -22,7 +22,7 @@ BUILDER=${BUILDER:-podman}
 echo ${CR_PASS} | $BUILDER login -u "${CR_USER}" --password-stdin  "${CR_REGISTRY}"
 
 IMAGE_ID="${CR_REGISTRY}/${CR_USER}/webdev-toolkit"
-VERSION=$(date %Y%m%d%H%M)
+VERSION=$(date +%Y%m%d%H%M)
 echo "IMAGE_ID=${IMAGE_ID}"
 echo "VERSION=${VERSION}"
 
