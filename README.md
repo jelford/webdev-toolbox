@@ -1,5 +1,7 @@
 # webdev-toolbox
 
+[![Build](https://github.com/jelford/webdev-toolbox/actions/workflows/build.yml/badge.svg)](https://github.com/jelford/webdev-toolbox/actions/workflows/build.yml)
+
 `webdev-toolbox` provides a one-stop-shop container for the commandline tools
 you were going to install anyway for web development.
 
