@@ -17,6 +17,57 @@ getting started, so you can focus on your great project, not fiddling with
 your environment and worrying about what you're leaving lying around your
 system.
 
+## Usage
+
+The image is available here:
+```
+ghcr.io/jelford/webdev-toolbox:latest
+# Or use a pinned version:
+ghcr.io/jelford/webdev-toolbox:202103251507
+```
+The image tag is the output of $(date +%Y%m%d%H%M) at the time of build.
+
+The following sections show specific use-cases, but they're all variations
+on using this image.
+
+### Local development
+
+*`toolbox`*: If you use [toolbox](https://github.com/containers/toolbox) you can do:
+```
+toolbox create -i ghcr.io/jelford/webdev-toolbox:latest -c webdev
+toolbox enter webdev
+```
+
+*Roll your own*: If you have an established `docker` workflow, or want to customize
+the image to suite your needs, you can use this at the top of your `Dockerfile`:
+
+```
+FROM ghcr.io/jelford/webdev-toolbox:latest
+```
+
+*Build locally*: You can build locally as normal
+
+```
+podman build -t webdev .
+# or if using docker:
+sudo docker build -t webdev --file Containerfile 
+
+# you can then initialize a toolbox using your local image:
+toolbox create -i webdev -c webdev
+```
+
+
+### CI
+
+You can use this image to get you started, but if you want to get the best
+build speed, you'll want to create your own image containing just what you need.
+Don't forget to use `npm ci` instead of `npm install` to speed up initializing
+your package.
+
+#### GitHub Actions
+
+#### CircleCI
+
 ## What's in the box?
 
 Where possible, tooling is installed directly from the Fedora repositories. That
@@ -38,7 +89,7 @@ A grab bag of standard developer tooling:
 - Build tooling: `make`, `gcc`
 - Extra shells: `zsh` and `fish`
 
-## What's not in the box?
+### What's not in the box?
 
 You may have noticed that some standard JS tooling is not in the box:
 `webpack`, `gulp`, `grunt` and friends. That's because
