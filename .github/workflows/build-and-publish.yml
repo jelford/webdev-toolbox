@@ -1,0 +1,28 @@
+name: Build and publish
+
+on: 
+  schedule:
+    0 0 * * 0
+
+jobs:
+  build-and-publish:
+    name: Build and publish the latest image
+    runs-on: ubuntu-latest
+
+    env:
+      BUILDER: docker
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build image
+        run: ci/build.sh
+
+      - name: Publish image
+        run: ci/publish.sh
+        env:
+          CR_USER: ${{ github.actor }}
+          CR_PASS: ${{ secrets.GITHUB_TOKEN }}
+          CR_REGISTRY: ghcr.io
+        

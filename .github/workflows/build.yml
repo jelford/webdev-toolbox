@@ -1,17 +1,10 @@
 name: Build
 
-on: 
-  push:
-    branches:
-      - main
-    paths:
-      - 'Containerfile'
-      - 'ci/*.sh'
-      - '.github/workflows/*.yml'
+on: push
 
 jobs:
-  build-and-publish:
-    name: Build and publish the latest version
+  build:
+    name: Build the latest image
     runs-on: ubuntu-latest
 
     env:
@@ -24,10 +17,4 @@ jobs:
       - name: Build image
         run: ci/build.sh
 
-      - name: Publish image
-        run: ci/publish.sh
-        env:
-          CR_USER: ${{ github.actor }}
-          CR_PASS: ${{ secrets.GITHUB_TOKEN }}
-          CR_REGISTRY: ghcr.io
         
