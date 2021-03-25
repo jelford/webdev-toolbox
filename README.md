@@ -27,7 +27,7 @@ ghcr.io/jelford/webdev-toolbox:latest
 # Or use a pinned version:
 ghcr.io/jelford/webdev-toolbox:202103251507
 ```
-The image tag is the output of $(date +%Y%m%d%H%M) at the time of build.
+The image tag is the output of `$(date +%Y%m%d%H%M)` at the time of build.
 
 The following sections show specific use-cases, but they're all variations
 on using this image.
