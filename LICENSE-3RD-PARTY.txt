@@ -1,6 +1,6 @@
 # Source code
 
-All source code in this repository is licensed under the ISC license, as
+All source code in this repository is licensed under the MIT license, as
 described in LICENSE.txt
 
 # Binary
