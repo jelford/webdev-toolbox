@@ -1,4 +1,6 @@
 #! /usr/bin/env bash
 set -euo pipefail
 
-docker build --tag webdev-toolbox --file Containerfile .
+BUILDER=${BUILDER:-podman}
+
+$BUILDER build --tag webdev-toolbox --file Containerfile .
