@@ -43,3 +43,14 @@ A grab bag of standard developer tooling:
 You may have noticed that some standard JS tooling is not in the box:
 `webpack`, `gulp`, `grunt` and friends. That's because
 each project is likely to use its own version
+
+## Why Fedora?
+
+- Tooling and packages are generally up-to-date
+- Permissive licensing around redistribution
+- Restrictive licensing around what goes into the distribution itself (which
+  enables it to be permissive about what you can do with it).
+
+Ubuntu was the other obvious choice, but [Canonical's IP Policy](https://ubuntu.com/legal/intellectual-property-policy)
+is less permissive than [Fedora's](https://fedoraproject.org/wiki/Distribution#Distribution).
+
