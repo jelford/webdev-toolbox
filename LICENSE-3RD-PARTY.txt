@@ -1,0 +1,29 @@
+# Source code
+
+All source code in this repository is licensed under the ISC license, as
+described in LICENSE.txt
+
+# Binary
+
+Binaries made available by this project contain packages made available
+by third parties. The following sections describe the licensing terms that
+apply to each.
+
+## Fedora
+
+- Fedora base toolbox image
+- Packages in the Fedora package repository
+
+The Fedora project's licensing policy is described here:
+https://fedoraproject.org/wiki/Licensing:Main
+
+In particular, this project depends on Fedora's packaging requirement that all
+software uses permissive, free licenses.
+
+## Mozilla
+
+- geckodriver
+
+geckodriver uses the same Mozilla Public License as Firefox:
+https://www.mozilla.org/en-US/MPL/2.0/
+
