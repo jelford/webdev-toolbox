@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'Containerfile'
+      - 'ci/*.sh'
+      - '.github/workflows/*.yml'
 
 jobs:
   build-and-publish:
