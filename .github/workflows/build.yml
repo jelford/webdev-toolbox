@@ -1,6 +1,11 @@
 name: Build
 
-on: push
+on: 
+  push:
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - 'LICENSE-3RD-PARTY.txt'
 
 jobs:
   build:
