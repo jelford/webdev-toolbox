@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora-toolbox:latest
+FROM registry.fedoraproject.org/fedora-toolbox:33
 
 # When running locally, use the developer cache as normal.
 ARG UPDATE_AS_OF=NONE
